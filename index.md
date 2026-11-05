@@ -28,4 +28,4 @@ High-level designs, solution patterns and implementation guidelines.
 
 ---
 
-*Architecture | Engineering | Cybersecurity*
+*Architecture \ Engineering \ Cybersecurity*
