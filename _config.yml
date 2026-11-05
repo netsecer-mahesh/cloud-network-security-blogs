@@ -1,0 +1,14 @@
+
+title: "Cloud Network & Security Architecture"
+description: "Practical architecture designs, implementation guides and lessons learned across cloud networking and cybersecurity."
+author: "Mahesh"
+theme: minima
+
+header_pages:
+  - f5/index.md
+  - palo-alto/index.md
+  - azure-networking/index.md
+  - cloud-security/index.md
+
+minima:
+  skin: classic
