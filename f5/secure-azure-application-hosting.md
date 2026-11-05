@@ -75,7 +75,8 @@ The internal load balancer `F5-LB` receives the translated traffic.
 Its configuration includes:
 
 - Floating IP enabled.
-- A backend pool containing the two F5 load balancers in the HA pair.
+- A backend pool containing the single F5 load balancer.
+    Note : For Redundancy Another F5 can be added in Active/Active configuration.
 - A load-balancing rule translating TCP 8801 to TCP 443.
 
 This allows the F5 application delivery layer to receive HTTPS traffic on its expected service port.
@@ -119,7 +120,7 @@ External application traffic follows the intended path through the WAF, Azure pu
 
 **F5 high availability**
 
-The F5 deployment uses a two-device HA pair. The Azure internal load-balancer configuration and F5 HA design must be validated together to ensure traffic reaches the active service instance as intended.
+The F5 deployment uses a single F5 appliance but For Redundancy Another F5 can be added in Active/Active configuration. . The Azure internal load-balancer configuration and F5 Active/Active design must be validated together to ensure traffic reaches the active service instance as intended.
 
 **Backend segmentation**
 
@@ -133,12 +134,12 @@ Before production deployment, validate the following:
 - Public load-balancer port translation.
 - Palo Alto NAT and security policy matching.
 - Internal load-balancer backend health and Floating IP configuration.
-- F5 application availability and HA behaviour.
+- F5 application availability and HA behavior, if Active/Active design implemented.
 - WAS connectivity to database and storage services.
 - Application availability during an F5 failover event.
 - End-to-end connectivity after failover.
 
-Actual failover behaviour should be confirmed through testing rather than assumed from the presence of an HA pair.
+Actual failover behaviour should be confirmed through testing rather than assumed from the presence of an  active/active HA pair.
 
 ## 7. Architecture Takeaways
 
