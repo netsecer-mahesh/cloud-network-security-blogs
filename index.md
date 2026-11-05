@@ -1,6 +1,6 @@
 
 ---
-layout: home
+layout: default
 title: Cloud Network & Security Architecture
 ---
 
