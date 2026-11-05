@@ -12,7 +12,7 @@ Hosting business-critical applications in the cloud requires more than simply ex
 
 This article explores an Azure application-hosting architecture integrating F5 load balancers with Palo Alto Networks firewalls. It demonstrates how Azure-native load balancing, firewall NAT and F5 application delivery can work together to provide a layered security architecture.
 
-## 2. Architecture Overview
+## 2. Architecture Overview 
 
 The solution uses the following components:
 
@@ -22,6 +22,8 @@ The solution uses the following components:
 - **Azure Internal Load Balancer (F5-LB):** Distributes traffic to the F5 load-balancer pair. Floating IP is enabled.
 - **F5 Load Balancers:** Provide application delivery and forward requests to the backend Web Application Servers (WAS).
 - **Backend Services:** Application servers communicate with database and storage services within the application VNet.
+
+### 2.1 High-Level Architecture Diagram (HLD)  
 <img width="1144" height="4046" alt="mermaid-diagram (1)" src="https://github.com/user-attachments/assets/fa2660bc-35d9-4e49-80a6-a8d8126c2433" />
 
 
@@ -32,7 +34,7 @@ The application components are hosted within the Azure VNet:
 `cls-prd-ext-app-vnet01`
 
 ## 3. End-to-End Traffic Flow
-## 3. Low-Level Design (LLD)
+## 3.1 Low-Level Design (LLD)
 
 The following diagram illustrates the complete traffic path, network boundaries, load-balancing configuration, firewall NAT and backend connectivity.
 
