@@ -25,6 +25,12 @@ F5 deployments across Azure and AWS, including integration with native cloud net
 ### Architecture & Implementation
 High-level designs, deployment patterns, configuration approaches and troubleshooting.
 
+## Articles
+
+### [Secure Azure Application Hosting Using F5 and Palo Alto Firewalls]({{ '/f5/secure-azure-application-hosting/' | relative_url }})
+
+An architecture and implementation guide covering Azure Load Balancers, Palo Alto firewall inspection and DNAT, F5 application delivery, traffic flow, and port translation.
+
 ---
 
 *Practical engineering \ Architecture \ Security*
