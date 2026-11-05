@@ -27,4 +27,4 @@ High-level designs, deployment patterns, configuration approaches and troublesho
 
 ---
 
-*Practical engineering | Architecture | Security*
+*Practical engineering \ Architecture \ Security*
