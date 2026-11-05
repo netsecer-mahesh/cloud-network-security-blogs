@@ -24,8 +24,8 @@ The solution uses the following components:
 - **Backend Services:** Application servers communicate with database and storage services within the application VNet.
 
 ### 2.1 High-Level Architecture Diagram (HLD)  
-<img width="1144" height="4046" alt="mermaid-diagram (1)" src="https://github.com/user-attachments/assets/fa2660bc-35d9-4e49-80a6-a8d8126c2433" />
 
+![Azure F5 Palo Alto Application Hosting HLD](https://netsecer-mahesh.github.io/cloud-network-security-blogs/assets/images/azure-f5-paloalto-hld.png)
 
 
 
