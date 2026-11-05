@@ -38,7 +38,7 @@ The application components are hosted within the Azure VNet:
 
 The following diagram illustrates the complete traffic path, network boundaries, load-balancing configuration, firewall NAT and backend connectivity.
 
-![Azure F5 Palo Alto Application Hosting LLD]({{ '/assets/images/azure-f5-paloalto-lld.png' | relative_url }})
+![Azure F5 Palo Alto Application Hosting LLD](https://netsecer-mahesh.github.io/cloud-network-security-blogs/assets/images/azure-f5-paloalto-lld.png)
 
 *Figure 1: Azure application hosting LLD – F5 and Palo Alto integration.*
 
