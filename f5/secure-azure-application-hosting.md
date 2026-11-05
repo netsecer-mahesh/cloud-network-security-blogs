@@ -22,11 +22,13 @@ The solution uses the following components:
 - **Azure Internal Load Balancer (F5-LB):** Distributes traffic to the F5 load-balancer pair. Floating IP is enabled.
 - **F5 Load Balancers:** Provide application delivery and forward requests to the backend Web Application Servers (WAS).
 - **Backend Services:** Application servers communicate with database and storage services within the application VNet.
+  
+### 2.1 High-Level Architecture Diagram (HLD)
 
-### 2.1 High-Level Architecture Diagram (HLD)  
-
-![Azure F5 Palo Alto Application Hosting HLD](https://netsecer-mahesh.github.io/cloud-network-security-blogs/assets/images/azure-f5-paloalto-hld.png)
-
+<div class="hld-diagram">
+  <img src="https://netsecer-mahesh.github.io/cloud-network-security-blogs/assets/images/azure-f5-paloalto-hld.png"
+       alt="Azure F5 Palo Alto Application Hosting HLD">
+</div>
 
 
 The application components are hosted within the Azure VNet:
