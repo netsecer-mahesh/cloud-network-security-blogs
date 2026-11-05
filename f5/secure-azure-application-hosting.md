@@ -32,7 +32,15 @@ The application components are hosted within the Azure VNet:
 `cls-prd-ext-app-vnet01`
 
 ## 3. End-to-End Traffic Flow
+## 3. Low-Level Design (LLD)
 
+The following diagram illustrates the complete traffic path, network boundaries, load-balancing configuration, firewall NAT and backend connectivity.
+
+![Azure F5 Palo Alto Application Hosting LLD]({{ '/assets/images/azure-f5-paloalto-lld.png' | relative_url }})
+
+*Figure 1: Azure application hosting LLD – F5 and Palo Alto integration.*
+
+---
 ### Step 1 – External Access and WAF Protection
 
 Users access the application through a browser or mobile device. Incoming web traffic first passes through the WAF layer, where applicable web application security controls are enforced.
