@@ -3,9 +3,6 @@
 
 @import "minima";
 
-.site-footer {
-  display: none;
-}
 .post-content img {
   display: block;
   max-width: 75%;
@@ -17,3 +14,8 @@ body {
   font-size: 15px;
   line-height: 1.55;
 }
+
+.site-footer {
+  display: none;
+}
+
