@@ -327,9 +327,9 @@ Our `INIT-001 — Network Security` initiative can be mapped to a custom standar
       <td><a href="https://github.com/netsecer-mahesh/cloud-network-security-blogs/blob/main/Cloud-Security/artifacts/deploy_initiative.py" target="_blank">View Python Script</a></td>
     </tr>
     <tr>
-      <td>Initiative Deployment Script</td>
+      <td>Policy Inventory</td>
       <td>Other Policies and policy parameter inventory</td>
-      <td><a href="https://github.com/netsecer-mahesh/cloud-network-security-blogs/blob/main/Cloud-Security/artifacts/Policy_definations" target="_blank">View Python Script</a></td>
+      <td><a href="https://github.com/netsecer-mahesh/cloud-network-security-blogs/blob/main/Cloud-Security/artifacts/Policy_definations" target="_blank">View Policy Inventory</a></td>
     </tr>
   </tbody>
 </table>
