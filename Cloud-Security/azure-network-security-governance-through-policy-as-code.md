@@ -51,7 +51,7 @@ The objective is not to introduce restrictions blindly, but to establish a consi
 
 *The lifecycle follows a continuous improvement approach: audit, review findings, remediate or document approved exemptions, and progressively enforce controls. Compliance is monitored continuously, and exemptions remain subject to review rather than becoming permanent blind spots.*
 <br>
-<div class="hld-diagram">
+<div class="policy-lifecycle-diagram">
   <img src="https://netsecer-mahesh.github.io/cloud-network-security-blogs/assets/images/Azure-Policy-Enforcement-Lifecycle.png"
        alt="Azure F5 Palo Alto Application Hosting HLD">
 </div>
@@ -215,7 +215,7 @@ Our `INIT-001 — Network Security` initiative can be mapped to a custom standar
 *From Azure Policy governance to centralized compliance visibility in Microsoft Defender for Cloud.*
 
 <br>
-<div class="hld-diagram">
+<div class="policy-to-security-posture-diagram">
   <img src="https://netsecer-mahesh.github.io/cloud-network-security-blogs/assets/images/Policy-to-Security-Posture.png"
        alt="Azure F5 Palo Alto Application Hosting HLD">
 </div>
