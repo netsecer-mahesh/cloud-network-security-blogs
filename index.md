@@ -20,7 +20,8 @@ Next-generation firewall architecture, NAT, segmentation and cloud security.
 ### Azure Networking
 Azure networking, load balancing, hub-and-spoke and hybrid connectivity.
 
-### Cloud Security
+### Cloud Security 
+### [Secure Azure Application Hosting Using F5 and Palo Alto Firewalls]({{ '/f5/secure-azure-application-hosting/' | relative_url }})
 Cloud security architecture, identity, governance and infrastructure protection.
 
 ### Architecture & Design
