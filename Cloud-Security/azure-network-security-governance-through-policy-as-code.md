@@ -23,7 +23,7 @@ We already have a stack of security solutions protecting our cloud environments 
 
 In this article, we will walk through building a foundational Azure network security governance baseline using Azure Policy.
 
-Will work on how to:
+In this article, we will explore how to:
 
 - **Define five foundational security controls:** Govern restricted NSG inbound ports, public IP tagging, storage public access, subnet default routes and broad NSG CIDR rules.
 - **Build a deployment pipeline:** Use JSON, Python and Azure CLI to deploy custom policy definitions and initiatives.
@@ -118,6 +118,28 @@ flowchart TD
 
     A --> B --> C --> D --> E
 ```
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Mermaid Flowchart</title>
+</head>
+<body>
+
+  <!-- 1. Wrap flowchart syntax in a pre or div with class="mermaid" -->
+  <pre class="mermaid">
+   flowchart TD
+    A["Policy JSON<br/>Definitions and Parameters"]
+    B["Python Deployment<br/>Azure CLI"]
+    C["MG-Foundation<br/>Policy Definitions and Initiative"]
+    D["INIT-001 — Network Security"]
+    E["Subscription Assignment<br/>sub-edge-sec"]
+
+    A --> B --> C --> D --> E
+  </pre>
+
+</body>
+</html>
+
 <br>
 
 
@@ -198,7 +220,7 @@ With all five custom policies grouped under a single network security initiative
 
 ### Query 1 — Initiative Compliance Overview
 
-
+```KQL
 PolicyResources
 | where type =~ "microsoft.policyinsights/policystates"
 | extend
@@ -209,6 +231,27 @@ PolicyResources
     Total = count(),
     Compliant = countif(State == "Compliant"),
     NonCompliant = countif(State == "NonCompliant")
+```
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>KQL Query Runner</title>
+</head>
+<body>
+  <textarea id="kqlInput" rows="4" cols="50">
+PolicyResources
+| where type =~ "microsoft.policyinsights/policystates"
+| extend
+    AssignmentName = tostring(properties.policyAssignmentName),
+    State = tostring(properties.complianceState)
+| where AssignmentName == "INIT-001-Network-Security"
+| summarize
+    Total = count(),
+    Compliant = countif(State == "Compliant"),
+    NonCompliant = countif(State == "NonCompliant")
+   <br>
+    </body>
+</html>
 
 
 **What it achieves**
@@ -217,7 +260,7 @@ Provides an overall compliance view of `INIT-001 — Network Security`, showing 
 
 ### Query 2 — Initiative Compliance Findings
 
-
+```KQL
 PolicyResources
 | where type =~ "microsoft.policyinsights/policystates"
 | extend
@@ -229,7 +272,7 @@ PolicyResources
 | where State == "NonCompliant"
 | project Resource, Policy, State
 | order by Policy asc
-
+```
 
 **What it achieves**
 
