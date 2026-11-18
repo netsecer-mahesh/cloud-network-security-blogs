@@ -11,19 +11,16 @@ My focus is on translating real-world engineering challenges into reusable archi
 
 ## Explore Technical Domains
 
-### F5
+### [F5 Loadbalancer]({{ '/f5/' | relative_url }})
 Application delivery, load balancing, high availability, WAF and traffic engineering.
 
-### Palo Alto
+### [Palo Alto]({{ '/Palo-Alto/' | relative_url }})
 Next-generation firewall architecture, NAT, segmentation and cloud security.
-
-### Azure Networking
-Azure networking, load balancing, hub-and-spoke and hybrid connectivity.
 
 ### [Cloud-Security]({{ '/Cloud-Security/' | relative_url }})
 Cloud security architecture, identity, governance and infrastructure protection.
 
-### Architecture & Design
+### [Architecture and Design]({{ '/architecture-and-design' | relative_url }})
 High-level designs, solution patterns and implementation guidelines.
 
 ---
