@@ -20,7 +20,7 @@ Next-generation firewall architecture, NAT, segmentation and cloud security.
 ### Azure Networking
 Azure networking, load balancing, hub-and-spoke and hybrid connectivity.
 
-### [Cloud_Security]({{ '/Cloud_Security/' | relative_url }})
+### [Cloud-Security]({{ '/Cloud_Security/' | relative_url }})
 Cloud security architecture, identity, governance and infrastructure protection.
 
 ### Architecture & Design
