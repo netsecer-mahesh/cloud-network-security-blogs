@@ -108,37 +108,17 @@ Both policy definitions and initiatives are deployed at `MG-Foundation`. Assignm
 The following flow illustrates how custom policy definitions are deployed,
 grouped into an initiative and assigned to the target subscription.
 
-```mermaid
-flowchart TD
-    A["Policy JSON<br/>Definitions and Parameters"]
-    B["Python Deployment<br/>Azure CLI"]
-    C["MG-Foundation<br/>Policy Definitions and Initiative"]
-    D["INIT-001 — Network Security"]
-    E["Subscription Assignment<br/>sub-edge-sec"]
 
-    A --> B --> C --> D --> E
-```
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <title>Mermaid Flowchart</title>
-</head>
-<body>
-
-  <!-- 1. Wrap flowchart syntax in a pre or div with class="mermaid" -->
   <pre class="mermaid">
+    ```mermaid
    flowchart TD
     A["Policy JSON<br/>Definitions and Parameters"]
     B["Python Deployment<br/>Azure CLI"]
     C["MG-Foundation<br/>Policy Definitions and Initiative"]
     D["INIT-001 — Network Security"]
     E["Subscription Assignment<br/>sub-edge-sec"]
-
-    A --> B --> C --> D --> E
   </pre>
-
-</body>
-</html>
+  ``
 
 <br>
 
@@ -232,27 +212,7 @@ PolicyResources
     Compliant = countif(State == "Compliant"),
     NonCompliant = countif(State == "NonCompliant")
 ```
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>KQL Query Runner</title>
-</head>
-<body>
-  <textarea id="kqlInput" rows="4" cols="50">
-PolicyResources
-| where type =~ "microsoft.policyinsights/policystates"
-| extend
-    AssignmentName = tostring(properties.policyAssignmentName),
-    State = tostring(properties.complianceState)
-| where AssignmentName == "INIT-001-Network-Security"
-| summarize
-    Total = count(),
-    Compliant = countif(State == "Compliant"),
-    NonCompliant = countif(State == "NonCompliant")
-   <br>
-    </body>
-</html>
-
+  
 
 **What it achieves**
 
