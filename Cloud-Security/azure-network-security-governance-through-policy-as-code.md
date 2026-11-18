@@ -50,7 +50,7 @@ Before following the implementation, ensure you have:
 
 ## Part 1 — Defining the Basic Network Security Hygiene Baseline
 
-The objective is to establish a small set of foundational network security controls for Azure-native resources. Rather than attempting to address every possible security scenario, this MVP focuses on five practical controls that can be implemented through custom Azure Policy definitions, with configurable parameters and an audit-first enforcement approach.
+The objective is to establish a small set of foundational network security controls for Azure-native resources. Rather than attempting to address every possible security scenario, this focuses on five practical controls that can be implemented through custom Azure Policy definitions, with configurable parameters and an audit-first enforcement approach.
 
 | # | Custom policy / control | Framework alignment | Control lifecycle |
 |---|---|---|---|
@@ -105,26 +105,27 @@ Both policy definitions and initiatives are deployed at `MG-Foundation`. Assignm
 
 ### Policy Deployment Architecture
 
-The following flow illustrates how custom policy definitions are deployed,
-grouped into an initiative and assigned to the target subscription.
+### Policy Deployment Architecture
 
+The following flow illustrates how custom policy definitions are deployed, grouped into an initiative and assigned to the target subscription.
 
-  <pre class="mermaid">
-    ```mermaid
-   flowchart TD
+```mermaid
+flowchart TD
     A["Policy JSON<br/>Definitions and Parameters"]
     B["Python Deployment<br/>Azure CLI"]
     C["MG-Foundation<br/>Policy Definitions and Initiative"]
     D["INIT-001 — Network Security"]
     E["Subscription Assignment<br/>sub-edge-sec"]
-  </pre>
-  ``
 
-<br>
+    A --> B
+    B --> C
+    C --> D
+    D --> E
+```
 
+*Policy definitions and initiatives are deployed at MG-Foundation, while the initiative assignment is performed separately at subscription scope.*
 
-Note - Policy definitions and initiatives are deployed at MG-Foundation, while
-the initiative assignment is performed separately at subscription scope.
+## Part 2 — Building the Azure Policy Deployment Pipeline
 
 ### Deployment scripts
 
