@@ -1,4 +1,5 @@
 # Azure Network Security Governance Through Policy as Code
+editing in progresss
 
 ### Why Azure Policy when we already have a stack of security solutions?
 
