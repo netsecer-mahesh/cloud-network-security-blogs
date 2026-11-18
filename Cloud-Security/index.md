@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Cloud Security
-permalink: /Cloud Security/
+permalink: /Cloud_Security/
 ---
 
 # Cloud Security – Architecture & Governance
