@@ -33,7 +33,8 @@ Will work on how to:
 
 <br>
 <br>
-## Prerequisites
+
+### Prerequisites
 
 Before following the implementation, ensure you have:
 
@@ -155,6 +156,7 @@ The package has been tested locally and through Azure Cloud Shell. GitHub Action
 <br>
 <br>
 <br>
+
 ## Part 3 — Implementing the Azure Network Security Baseline
 
 With the five controls defined, the next step is to bring them together through Azure Policy. Each control is maintained as an independent JSON policy definition with configurable parameters. These policies are grouped into one initiative and assigned to `sub-edge-sec`.
@@ -189,6 +191,7 @@ Once assigned, Azure Policy evaluates the resources against the initiative. We r
 <br>
 <br>
 <br>
+
 ## Part 4 — Monitoring Network Security Compliance with KQL
 
 With all five custom policies grouped under a single network security initiative, we need a consolidated view of how the assigned baseline is performing. Azure Resource Graph allows us to query Azure Policy compliance data using KQL.
@@ -268,6 +271,7 @@ Our `INIT-001 — Network Security` initiative can be mapped to a custom standar
 </div>
 *Azure Policy establishes the governance baseline, while Microsoft Defender for Cloud extends visibility through centralized security posture and compliance monitoring.*
 <br>
+
 ### What does this give us?
 
 - **Centralized visibility:** View the initiative's compliance status through Defender for Cloud.
@@ -324,7 +328,7 @@ Our `INIT-001 — Network Security` initiative can be mapped to a custom standar
     </tr>
   </tbody>
 </table>
-https://github.com/netsecer-mahesh/cloud-network-security-blogs/blob/main/Cloud-Security/artifacts/INIT-001-network-security_initiative_parameters.json
+
 ## Closing Thoughts
 
 Azure Policy provides a practical way to move from individual security controls to a consistent governance baseline. By defining controls as code, grouping them into initiatives and progressively enforcing them, we can make security requirements repeatable and measurable across Azure environments.
