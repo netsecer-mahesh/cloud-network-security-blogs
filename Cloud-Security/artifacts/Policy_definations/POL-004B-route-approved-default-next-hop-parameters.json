@@ -1,0 +1,11 @@
+{
+  "effect": {
+    "value": "Audit"
+  },
+  "approvedNextHopIPs": {
+    "value": [
+      "10.0.1.4",
+      "10.0.2.4"
+    ]
+  }
+}
