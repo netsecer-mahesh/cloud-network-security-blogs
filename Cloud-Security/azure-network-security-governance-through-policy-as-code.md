@@ -238,7 +238,7 @@ Our `INIT-001 — Network Security` initiative can be mapped to a custom standar
 |---|---|
 | Custom policy definitions | Add repository link |
 | Policy parameter files | Add repository link |
-| Initiative definition | Add repository link |
+| Initiative definition | Cloud-Security/artifacts/INIT-001-network-security_initiative.json |
 | Initiative assignment parameters | Add repository link |
 | `deploy_policy.py` | Add repository link |
 | `deploy_initiative.py` | Add repository link |
