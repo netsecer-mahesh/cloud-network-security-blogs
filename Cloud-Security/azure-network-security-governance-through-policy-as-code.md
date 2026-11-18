@@ -1,3 +1,11 @@
+---
+layout: default
+title: "Secure Azure Application Hosting Using F5 and Palo Alto Firewalls"
+permalink: /cloud-security/azure-network-security-governance-through-policy-as-code/
+---
+
+
+
 # Azure Network Security Governance Through Policy as Code
 editing in progresss
 
