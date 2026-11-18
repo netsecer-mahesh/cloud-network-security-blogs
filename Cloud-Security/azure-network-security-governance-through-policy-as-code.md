@@ -20,6 +20,8 @@ We already have a stack of security solutions protecting our cloud environments 
 ---
 <br>
 <br>
+<br>
+<br>
 
 ## Part 1 — Defining the Basic Network Security Hygiene Baseline
 
@@ -50,6 +52,10 @@ The objective is not to introduce restrictions blindly, but to establish a consi
 *The lifecycle follows a continuous improvement approach: audit, review findings, remediate or document approved exemptions, and progressively enforce controls. Compliance is monitored continuously, and exemptions remain subject to review rather than becoming permanent blind spots.*
 
 ---
+<br>
+<br>
+<br>
+<br>
 
 ## Part 2 — Building the Azure Policy Deployment Pipeline
 
@@ -95,7 +101,10 @@ Explore the actual [deployment scripts and JSON artifacts](#artifact-reference).
 The package has been tested locally and through Azure Cloud Shell. GitHub Actions and Terraform integration remain future enhancements.
 
 ---
-
+<br>
+<br>
+<br>
+<br>
 ## Part 3 — Implementing the Azure Network Security Baseline
 
 With the five controls defined, the next step is to bring them together through Azure Policy. Each control is maintained as an independent JSON policy definition with configurable parameters. These policies are grouped into one initiative and assigned to `sub-edge-sec`.
@@ -126,7 +135,10 @@ Once assigned, Azure Policy evaluates the resources against the initiative. We r
 [Policy definitions](#artifact-reference) · [Policy parameters](#artifact-reference) · [Initiative JSON](#artifact-reference) · [Deployment scripts](#artifact-reference)
 
 ---
-
+<br>
+<br>
+<br>
+<br>
 ## Part 4 — Monitoring Network Security Compliance with KQL
 
 With all five custom policies grouped under a single network security initiative, we need a consolidated view of how the assigned baseline is performing. Azure Resource Graph allows us to query Azure Policy compliance data using KQL.
@@ -182,7 +194,10 @@ The objective is to monitor the complete network security baseline through one i
 *Implementation note: Replace the example assignment name with the actual policy assignment resource name used in your environment. The overview counts policy-state records, which can include multiple records for a resource; it should not be interpreted as a unique-resource compliance percentage.*
 
 ---
-
+<br>
+<br>
+<br>
+<br>
 ## Extending Visibility with Microsoft Defender for Cloud
 
 Azure Policy establishes the governance baseline, while Microsoft Defender for Cloud provides centralized security posture and compliance visibility.
