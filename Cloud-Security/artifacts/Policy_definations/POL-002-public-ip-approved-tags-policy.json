@@ -1,0 +1,67 @@
+{
+  "properties": {
+    "displayName": "POL-002 - Public IP Approved Tag Governance",
+    "policyType": "Custom",
+    "mode": "Indexed",
+    "description": "Audits or denies public IP addresses that do not contain the required governance tag with an approved value.",
+    "metadata": {
+      "category": "Network Security",
+      "version": "1.0.0"
+    },
+    "parameters": {
+      "effect": {
+        "type": "String",
+        "metadata": {
+          "displayName": "Effect",
+          "description": "Policy enforcement effect."
+        },
+        "allowedValues": [
+          "Audit",
+          "Deny",
+          "Disabled"
+        ],
+        "defaultValue": "Audit"
+      },
+      "requiredTagName": {
+        "type": "String",
+        "metadata": {
+          "displayName": "Required tag name",
+          "description": "Tag key required on public IP resources."
+        },
+        "defaultValue": "Governance"
+      },
+      "approvedTagValues": {
+        "type": "Array",
+        "metadata": {
+          "displayName": "Approved tag values",
+          "description": "Allowed values for the required tag."
+        }
+      }
+    },
+    "policyRule": {
+      "if": {
+        "allOf": [
+          {
+            "field": "type",
+            "equals": "Microsoft.Network/publicIPAddresses"
+          },
+          {
+            "anyOf": [
+              {
+                "field": "[concat('tags[', parameters('requiredTagName'), ']')]",
+                "exists": "false"
+              },
+              {
+                "field": "[concat('tags[', parameters('requiredTagName'), ']')]",
+                "notIn": "[parameters('approvedTagValues')]"
+              }
+            ]
+          }
+        ]
+      },
+      "then": {
+        "effect": "[parameters('effect')]"
+      }
+    }
+  }
+}
