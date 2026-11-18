@@ -1,0 +1,18 @@
+{
+  "properties": {
+    "displayName": "INIT-001 - Network Security",
+    "description": "Network security governance initiative covering enterprise network security controls.",
+    "metadata": {
+      "category": "Network Security",
+      "version": "1.0.0"
+    },
+    "policyDefinitions": [
+      {
+        "policyDefinitionReferenceId": "",
+        "policyDefinitionId": "",
+        "parameters": {}
+      }
+    ],
+    "parameters": {}
+  }
+}
