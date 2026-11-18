@@ -109,19 +109,10 @@ Both policy definitions and initiatives are deployed at `MG-Foundation`. Assignm
 
 The following flow illustrates how custom policy definitions are deployed, grouped into an initiative and assigned to the target subscription.
 
-```mermaid
-flowchart TD
-    A["Policy JSON<br/>Definitions and Parameters"]
-    B["Python Deployment<br/>Azure CLI"]
-    C["MG-Foundation<br/>Policy Definitions and Initiative"]
-    D["INIT-001 — Network Security"]
-    E["Subscription Assignment<br/>sub-edge-sec"]
-
-    A --> B
-    B --> C
-    C --> D
-    D --> E
-```
+<div class="mermaid-policy-implementation-diagram">
+  <img src="https://netsecer-mahesh.github.io/cloud-network-security-blogs/assets/images/mermaid-policy-implementation.png"
+       alt="Policy-Implementation">
+</div>
 
 *Policy definitions and initiatives are deployed at MG-Foundation, while the initiative assignment is performed separately at subscription scope.*
 
