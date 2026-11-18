@@ -299,17 +299,17 @@ Our `INIT-001 — Network Security` initiative can be mapped to a custom standar
     <tr>
       <td>Custom Policy Definition</td>
       <td>NSG Restricted Inbound Ports</td>
-      <td><a href="https://github.com/netsecer-mahesh/cloud-network-security-blogs/blob/main/Cloud-Security/artifacts/restricted_inbound_ports_policy.json" target="_blank">View JSON</a></td>
+      <td><a href="https://github.com/netsecer-mahesh/cloud-network-security-blogs/blob/main/Cloud-Security/artifacts/POL-001-NSG-Restricted-Inbound-Ports_policy.json" target="_blank">View JSON</a></td>
     </tr>
     <tr>
       <td>Policy Parameters</td>
       <td>Restricted inbound ports configuration</td>
-      <td><a href="https://github.com/netsecer-mahesh/cloud-network-security-blogs/blob/main/Cloud-Security/artifacts/restricted_inbound_ports_parameters.json" target="_blank">View JSON</a></td>
+      <td><a href="https://github.com/netsecer-mahesh/cloud-network-security-blogs/blob/main/Cloud-Security/artifacts/POL-001-NSG-Restricted-Inbound-Ports_policy_parameters.json" target="_blank">View JSON</a></td>
     </tr>
     <tr>
       <td>Initiative Definition</td>
       <td>Network Security Initiative</td>
-      <td><a href="https://github.com/netsecer-mahesh/cloud-network-security-blogs/blob/main/Cloud-Security/artifacts/network_security_initiative.json" target="_blank">View JSON</a></td>
+      <td><a href="https://github.com/netsecer-mahesh/cloud-network-security-blogs/blob/main/Cloud-Security/artifacts/INIT-001-network-security_initiative.json" target="_blank">View JSON</a></td>
     </tr>
     <tr>
       <td>Initiative Assignment Parameters</td>
@@ -325,6 +325,11 @@ Our `INIT-001 — Network Security` initiative can be mapped to a custom standar
       <td>Initiative Deployment Script</td>
       <td>Groups and deploys policy initiatives</td>
       <td><a href="https://github.com/netsecer-mahesh/cloud-network-security-blogs/blob/main/Cloud-Security/artifacts/deploy_initiative.py" target="_blank">View Python Script</a></td>
+    </tr>
+    <tr>
+      <td>Initiative Deployment Script</td>
+      <td>Other Policies and policy parameter inventory</td>
+      <td><a href="https://github.com/netsecer-mahesh/cloud-network-security-blogs/blob/main/Cloud-Security/artifacts/Policy_definations" target="_blank">View Python Script</a></td>
     </tr>
   </tbody>
 </table>
