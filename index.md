@@ -1,7 +1,6 @@
 ---
 layout: default
 title: Cloud Network & Security Architecture
-permalink: /index
 ---
 
 # Cloud Network & Security Architecture
