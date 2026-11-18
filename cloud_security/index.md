@@ -1,7 +1,7 @@
 ---
 layout: default
-title: Cloud-Security
-permalink: /Cloud_Security/
+title: cloud_security
+permalink: /cloud_security/
 ---
 
 # Cloud Security – Architecture & Governance
@@ -27,7 +27,7 @@ Microsoft Defender for Cloud, security recommendations, compliance monitoring, A
 
 ## Articles
 
-### [Azure Network Security Governance Through Policy as Code]({{ '/cloud-security/azure-network-security-governance-through-policy-as-code/' | relative_url }})
+### [Azure Network Security Governance Through Policy as Code]({{ '/cloud_security/azure-network-security-governance-through-policy-as-code/' | relative_url }})
 
 Building a foundational Azure network security baseline using custom Azure Policies, initiatives, Python-based deployment automation, compliance monitoring with KQL and Microsoft Defender for Cloud integration.
 
