@@ -61,6 +61,7 @@ The objective is to establish a small set of foundational network security contr
 | 5 | **NSG – CIDR Governance**: Identify overly broad `Any` source/destination definitions and replace them with approved company CIDRs. | NIST: AC-4, CM-6; CIS: Network Infrastructure Management; MCSB: NS-1 | **Audit → Review → Replace with approved CIDRs → Deny** |
 
 *Note: Framework references are provisional, high-level mappings and should be validated against the relevant official framework catalogues before publication.*
+<br>
 
 ### Implementing the baseline
 
@@ -70,9 +71,9 @@ We will begin with Audit to understand the existing environment and identify dev
 
 The objective is not to introduce restrictions blindly, but to establish a consistent and measurable network security baseline that can be progressively enforced across the Azure environment.
 
-### Policy Enforcement Lifecycle
+<br>
 
-<!-- DIAGRAM INSERTION POINT: Policy Enforcement Lifecycle -->
+### Policy Enforcement Lifecycle
 
 *The lifecycle follows a continuous improvement approach: audit, review findings, remediate or document approved exemptions, and progressively enforce controls. Compliance is monitored continuously, and exemptions remain subject to review rather than becoming permanent blind spots.*
 <br>
@@ -81,8 +82,7 @@ The objective is not to introduce restrictions blindly, but to establish a consi
        alt="Azure Policy Enforcement Lifecycle">
 </div>
 *The Azure Policy enforcement lifecycle follows a continuous improvement approach: audit existing configurations, review compliance findings, remediate deviations, document approved exemptions and progressively enforce security controls.*
-<br>
-<br>
+
 <br>
 
 ## Part 2 — Building the Azure Policy Deployment Pipeline
@@ -105,8 +105,6 @@ Both policy definitions and initiatives are deployed at `MG-Foundation`. Assignm
 
 ### Policy Deployment Architecture
 
-### Policy Deployment Architecture
-
 The following flow illustrates how custom policy definitions are deployed, grouped into an initiative and assigned to the target subscription.
 
 <div class="mermaid-policy-implementation-diagram">
@@ -116,7 +114,6 @@ The following flow illustrates how custom policy definitions are deployed, group
 
 *Policy definitions and initiatives are deployed at MG-Foundation, while the initiative assignment is performed separately at subscription scope.*
 
-## Part 2 — Building the Azure Policy Deployment Pipeline
 
 ### Deployment scripts
 
@@ -146,7 +143,6 @@ Explore the actual [deployment scripts and JSON artifacts](#artifact-reference).
 The package has been tested locally and through Azure Cloud Shell. GitHub Actions and Terraform integration remain future enhancements.
 
 ---
-<br>
 <br>
 <br>
 <br>
@@ -184,7 +180,7 @@ Once assigned, Azure Policy evaluates the resources against the initiative. We r
 <br>
 <br>
 <br>
-<br>
+
 
 ## Part 4 — Monitoring Network Security Compliance with KQL
 
@@ -242,7 +238,6 @@ The objective is to monitor the complete network security baseline through one i
 *Implementation note: Replace the example assignment name with the actual policy assignment resource name used in your environment. The overview counts policy-state records, which can include multiple records for a resource; it should not be interpreted as a unique-resource compliance percentage.*
 
 ---
-<br>
 <br>
 <br>
 <br>
