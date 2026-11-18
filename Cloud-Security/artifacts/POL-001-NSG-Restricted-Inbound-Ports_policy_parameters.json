@@ -1,0 +1,15 @@
+
+{
+  "parameters": {
+    "nsgEffect": {
+      "value": "Audit"
+    },
+    "ports": {
+      "value": [
+        "22",
+        "1433",
+        "3389"
+      ]
+    }
+  }
+}
