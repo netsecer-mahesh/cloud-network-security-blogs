@@ -50,9 +50,12 @@ The objective is not to introduce restrictions blindly, but to establish a consi
 <!-- DIAGRAM INSERTION POINT: Policy Enforcement Lifecycle -->
 
 *The lifecycle follows a continuous improvement approach: audit, review findings, remediate or document approved exemptions, and progressively enforce controls. Compliance is monitored continuously, and exemptions remain subject to review rather than becoming permanent blind spots.*
-
----
 <br>
+<div class="hld-diagram">
+  <img src="https://netsecer-mahesh.github.io/cloud-network-security-blogs/assets/images/Azure-Policy-Enforcement-Lifecycle.png"
+       alt="Azure F5 Palo Alto Application Hosting HLD">
+</div>
+
 <br>
 <br>
 <br>
@@ -198,15 +201,8 @@ The objective is to monitor the complete network security baseline through one i
 <br>
 <br>
 <br>
-<div class="hld-diagram">
-  <img src="https://netsecer-mahesh.github.io/cloud-network-security-blogs/assets/images/azure-f5-paloalto-hld.png"
-       alt="Azure F5 Palo Alto Application Hosting HLD">
-</div>
 
-<div class="hld-diagram">
-  <img src="https://netsecer-mahesh.github.io/cloud-network-security-blogs/assets/images/azure-f5-paloalto-hld.png"
-       alt="Azure F5 Palo Alto Application Hosting HLD">
-</div>
+
 
 ## Extending Visibility with Microsoft Defender for Cloud
 
@@ -218,6 +214,12 @@ Our `INIT-001 — Network Security` initiative can be mapped to a custom standar
 
 *From Azure Policy governance to centralized compliance visibility in Microsoft Defender for Cloud.*
 
+<br>
+<div class="hld-diagram">
+  <img src="https://netsecer-mahesh.github.io/cloud-network-security-blogs/assets/images/Policy-to-Security-Posture.png"
+       alt="Azure F5 Palo Alto Application Hosting HLD">
+</div>
+<br>
 ### What does this give us?
 
 - **Centralized visibility:** View the initiative's compliance status through Defender for Cloud.
