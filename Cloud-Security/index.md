@@ -10,6 +10,7 @@ Practical architecture designs, implementation guides and technical insights cov
 
 ## Topics
 
+
 ### Cloud Network Security
 Secure cloud networking architectures, hub-and-spoke designs, network segmentation, routing, firewalls and traffic inspection.
 
