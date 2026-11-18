@@ -19,6 +19,17 @@ We already have a stack of security solutions protecting our cloud environments 
 
 ---
 
+
+
+
+
+
+
+
+
+
+
+
 ## Part 1 — Defining the Basic Network Security Hygiene Baseline
 
 The objective is to establish a small set of foundational network security controls for Azure-native resources. Rather than attempting to address every possible security scenario, this MVP focuses on five practical controls that can be implemented through custom Azure Policy definitions, with configurable parameters and an audit-first enforcement approach.
