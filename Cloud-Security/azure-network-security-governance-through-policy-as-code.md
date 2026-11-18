@@ -18,17 +18,8 @@ Azure Policy is not another security product in the stack; it is a governance la
 We already have a stack of security solutions protecting our cloud environments — Defender for Cloud, WAF, firewalls, endpoint protection and many other cloud-native and third-party services. So why do we need Azure Policy? Doesn't Defender for Cloud already identify security risks? Doesn't a WAF protect our applications? They do, but they solve different problems. A WAF protects applications, Defender for Cloud provides security posture visibility and recommendations, and firewalls control network traffic. But who ensures that the underlying Azure resources are consistently configured in the first place? Who prevents an NSG from exposing management ports to the internet, or an unexpected public IP from being deployed? That's where Azure Policy comes in — not to replace existing security solutions, but to establish the guardrails that help prevent poor configurations from becoming security risks.
 
 ---
-
-\n
-\n
-
-
-
-
-
-
-
-
+<br>
+<br>
 
 ## Part 1 — Defining the Basic Network Security Hygiene Baseline
 
