@@ -1,3 +1,9 @@
+---
+layout: default
+title: Cloud Security
+permalink: /Cloud Security/
+---
+
 # Cloud Security – Architecture & Governance
 
 Practical architecture designs, implementation guides and technical insights covering cloud security, network security, governance and security automation across Microsoft Azure and AWS.
