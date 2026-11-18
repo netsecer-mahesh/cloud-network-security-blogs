@@ -7,7 +7,7 @@ permalink: /cloud-security/azure-network-security-governance-through-policy-as-c
 
 
 # Azure Network Security Governance Through Policy as Code
-editing in progresss
+
 
 ### Why Azure Policy when we already have a stack of security solutions?
 
