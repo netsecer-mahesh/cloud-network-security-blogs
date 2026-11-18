@@ -8,8 +8,7 @@ permalink: /Cloud_Security/
 
 Practical architecture designs, implementation guides and technical insights covering cloud security, network security, governance and security automation across Microsoft Azure and AWS.
 
-## Topics
-
+## Topics -
 
 ### Cloud Network Security
 Secure cloud networking architectures, hub-and-spoke designs, network segmentation, routing, firewalls and traffic inspection.
