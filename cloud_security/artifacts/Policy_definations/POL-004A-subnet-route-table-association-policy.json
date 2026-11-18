@@ -1,0 +1,44 @@
+{
+  "properties": {
+    "displayName": "POL-004A - Subnet Route Table Association",
+    "policyType": "Custom",
+    "mode": "All",
+    "description": "Audits or denies virtual network subnets without an associated route table.",
+    "metadata": {
+      "category": "Network Security",
+      "version": "1.0.0"
+    },
+    "parameters": {
+      "effect": {
+        "type": "String",
+        "metadata": {
+          "displayName": "Effect",
+          "description": "Policy enforcement effect."
+        },
+        "allowedValues": [
+          "Audit",
+          "Deny",
+          "Disabled"
+        ],
+        "defaultValue": "Audit"
+      }
+    },
+    "policyRule": {
+      "if": {
+        "allOf": [
+          {
+            "field": "type",
+            "equals": "Microsoft.Network/virtualNetworks/subnets"
+          },
+          {
+            "field": "Microsoft.Network/virtualNetworks/subnets/routeTable.id",
+            "exists": "false"
+          }
+        ]
+      },
+      "then": {
+        "effect": "[parameters('effect')]"
+      }
+    }
+  }
+}

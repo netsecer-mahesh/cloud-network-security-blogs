@@ -1,0 +1,14 @@
+{
+  "effect": {
+    "value": "Audit"
+  },
+  "broadAddressPrefixes": {
+    "value": [
+      "*",
+      "Any",
+      "0.0.0.0/0",
+      "::/0",
+      "Internet"
+    ]
+  }
+}
