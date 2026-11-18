@@ -198,6 +198,16 @@ The objective is to monitor the complete network security baseline through one i
 <br>
 <br>
 <br>
+<div class="hld-diagram">
+  <img src="https://netsecer-mahesh.github.io/cloud-network-security-blogs/assets/images/azure-f5-paloalto-hld.png"
+       alt="Azure F5 Palo Alto Application Hosting HLD">
+</div>
+
+<div class="hld-diagram">
+  <img src="https://netsecer-mahesh.github.io/cloud-network-security-blogs/assets/images/azure-f5-paloalto-hld.png"
+       alt="Azure F5 Palo Alto Application Hosting HLD">
+</div>
+
 ## Extending Visibility with Microsoft Defender for Cloud
 
 Azure Policy establishes the governance baseline, while Microsoft Defender for Cloud provides centralized security posture and compliance visibility.
