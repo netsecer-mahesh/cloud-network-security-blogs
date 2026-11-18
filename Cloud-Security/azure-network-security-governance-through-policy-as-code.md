@@ -1,7 +1,6 @@
 ---
 layout: default
 title: "Azure Network Security Governance through policy as code"
-permalink: /cloud-security/azure-network-security-governance-through-policy-as-code/
 ---
 
 
