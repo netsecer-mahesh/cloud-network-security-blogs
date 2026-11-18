@@ -17,7 +17,7 @@ Application delivery, load balancing, high availability, WAF and traffic enginee
 ### [Palo Alto]({{ '/Palo-Alto/' | relative_url }})
 Next-generation firewall architecture, NAT, segmentation and cloud security.
 
-### [Cloud-Security]({{ '/Cloud-Security/' | relative_url }})
+### [Cloud-Security]({{ '/cloud-security/' | relative_url }})
 Cloud security architecture, identity, governance and infrastructure protection.
 
 ### [Architecture and Design]({{ '/architecture-and-design' | relative_url }})

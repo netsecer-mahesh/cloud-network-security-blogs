@@ -27,7 +27,7 @@ Microsoft Defender for Cloud, security recommendations, compliance monitoring, A
 
 ## Articles
 
-### [Azure Network Security Governance Through Policy as Code]({{ '/Cloud_Security/azure-network-security-governance-through-policy-as-code/' | relative_url }})
+### [Azure Network Security Governance Through Policy as Code]({{ '/cloud-security/azure-network-security-governance-through-policy-as-code/' | relative_url }})
 
 Building a foundational Azure network security baseline using custom Azure Policies, initiatives, Python-based deployment automation, compliance monitoring with KQL and Microsoft Defender for Cloud integration.
 

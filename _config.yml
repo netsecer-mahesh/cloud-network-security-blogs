@@ -8,7 +8,7 @@ header_pages:
   - f5/index.md
   - palo-alto/index.md
   - azure-networking/index.md
-  - Cloud-Security/index.md
+  - cloud-security/index.md
 
 minima:
   skin: classic
