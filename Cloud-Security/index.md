@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Cloud Security
+title: Cloud_Security
 permalink: /Cloud_Security/
 ---
 
