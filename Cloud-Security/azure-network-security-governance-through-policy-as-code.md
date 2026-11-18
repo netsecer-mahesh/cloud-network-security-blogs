@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Secure Azure Application Hosting Using F5 and Palo Alto Firewalls"
+title: "Azure Network Security Governance through policy as code"
 permalink: /cloud-security/azure-network-security-governance-through-policy-as-code/
 ---
 
@@ -20,6 +20,30 @@ We already have a stack of security solutions protecting our cloud environments 
 ---
 <br>
 <br>
+
+In this article, we will walk through building a foundational Azure network security governance baseline using Azure Policy.
+
+Will work on how to:
+
+- **Define five foundational security controls:** Govern restricted NSG inbound ports, public IP tagging, storage public access, subnet default routes and broad NSG CIDR rules.
+- **Build a deployment pipeline:** Use JSON, Python and Azure CLI to deploy custom policy definitions and initiatives.
+- **Group and assign policies:** Combine the five controls into a single initiative and assign it to the target Azure subscription.
+- **Evaluate compliance:** Review Azure Policy compliance results and identify resources that require remediation.
+- **Monitor the baseline:** Use Azure Resource Graph and KQL to query compliance, and extend visibility through Microsoft Defender for Cloud.
+
+<br>
+<br>
+## Prerequisites
+
+Before following the implementation, ensure you have:
+
+- **Azure Subscription:** An active Azure subscription for deploying and testing Azure Policy.
+- **Management Group Access:** Appropriate permissions to create policy definitions and initiatives at the target management group.
+- **Azure CLI:** Installed and authenticated to the target Azure environment.
+- **Python:** Python environment available to execute the policy deployment scripts.
+- **Azure Resource Graph:** Access to query Azure Policy compliance data using KQL.
+- **GitHub Repository:** A repository to maintain policy definitions, parameter files, initiatives and deployment scripts.
+
 <br>
 <br>
 
@@ -53,9 +77,9 @@ The objective is not to introduce restrictions blindly, but to establish a consi
 <br>
 <div class="policy-lifecycle-diagram">
   <img src="https://netsecer-mahesh.github.io/cloud-network-security-blogs/assets/images/Azure-Policy-Enforcement-Lifecycle.png"
-       alt="Azure F5 Palo Alto Application Hosting HLD">
+       alt="Azure Policy Enforcement Lifecycle">
 </div>
-
+*The Azure Policy enforcement lifecycle follows a continuous improvement approach: audit existing configurations, review compliance findings, remediate deviations, document approved exemptions and progressively enforce security controls.*
 <br>
 <br>
 <br>
@@ -68,15 +92,36 @@ Our implementation uses a simple combination of JSON, Python and Azure CLI. Poli
 
 Our current Azure hierarchy:
 
-```text
+
 Tenant Root Group
        |
    MG-Foundation
        |
    sub-edge-sec
-```
+
 
 Both policy definitions and initiatives are deployed at `MG-Foundation`. Assignments are managed separately at the subscription scope.
+
+### Policy Deployment Architecture
+
+The following flow illustrates how custom policy definitions are deployed,
+grouped into an initiative and assigned to the target subscription.
+
+```mermaid
+flowchart TD
+    A["Policy JSON<br/>Definitions and Parameters"]
+    B["Python Deployment<br/>Azure CLI"]
+    C["MG-Foundation<br/>Policy Definitions and Initiative"]
+    D["INIT-001 — Network Security"]
+    E["Subscription Assignment<br/>sub-edge-sec"]
+
+    A --> B --> C --> D --> E
+```
+note - A --> B --> C --> D --> E
+
+
+Note - Policy definitions and initiatives are deployed at MG-Foundation, while
+the initiative assignment is performed separately at subscription scope.
 
 ### Deployment scripts
 
@@ -91,13 +136,49 @@ Before deployment, the scripts validate the active Azure context, target managem
 
 The deployment package contains:
 
-| Artifact | Purpose |
-|---|---|
-| Policy JSON | Custom policy definition |
-| Policy parameters JSON | Configurable policy parameters |
-| Initiative JSON | Groups individual policies |
-| Initiative parameters JSON | Parameters used during initiative assignment |
-| Python scripts | Deployment automation |
+<h3 id="artifact-reference">Artifact Reference</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th>Artifact</th>
+      <th>Description</th>
+      <th>Repository Link</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Custom Policy Definition</td>
+      <td>NSG Restricted Inbound Ports</td>
+      <td><a href="https://github.com/netsecer-mahesh/netsecer-mahesh.github.io/blob/main/cloud-security/artifacts/restricted_inbound_ports_policy.json" target="_blank">View JSON</a></td>
+    </tr>
+    <tr>
+      <td>Policy Parameters</td>
+      <td>Restricted inbound ports configuration</td>
+      <td><a href="https://github.com/netsecer-mahesh/netsecer-mahesh.github.io/blob/main/cloud-security/artifacts/restricted_inbound_ports_parameters.json" target="_blank">View JSON</a></td>
+    </tr>
+    <tr>
+      <td>Initiative Definition</td>
+      <td>Network Security Initiative</td>
+      <td><a href="https://github.com/netsecer-mahesh/netsecer-mahesh.github.io/blob/main/cloud-security/artifacts/network_security_initiative.json" target="_blank">View JSON</a></td>
+    </tr>
+    <tr>
+      <td>Initiative Assignment Parameters</td>
+      <td>Initiative assignment configuration</td>
+      <td><a href="https://github.com/netsecer-mahesh/netsecer-mahesh.github.io/blob/main/cloud-security/artifacts/network_security_initiative_parameters.json" target="_blank">View JSON</a></td>
+    </tr>
+    <tr>
+      <td>Policy Deployment Script</td>
+      <td>Deploys custom policy definitions</td>
+      <td><a href="https://github.com/netsecer-mahesh/netsecer-mahesh.github.io/blob/main/cloud-security/artifacts/deploy_policy.py" target="_blank">View Python Script</a></td>
+    </tr>
+    <tr>
+      <td>Initiative Deployment Script</td>
+      <td>Groups and deploys policy initiatives</td>
+      <td><a href="https://github.com/netsecer-mahesh/netsecer-mahesh.github.io/blob/main/cloud-security/artifacts/deploy_initiative.py" target="_blank">View Python Script</a></td>
+    </tr>
+  </tbody>
+</table>
 
 Explore the actual [deployment scripts and JSON artifacts](#artifact-reference).
 
@@ -148,7 +229,7 @@ With all five custom policies grouped under a single network security initiative
 
 ### Query 1 — Initiative Compliance Overview
 
-```kusto
+
 PolicyResources
 | where type =~ "microsoft.policyinsights/policystates"
 | extend
@@ -159,7 +240,7 @@ PolicyResources
     Total = count(),
     Compliant = countif(State == "Compliant"),
     NonCompliant = countif(State == "NonCompliant")
-```
+
 
 **What it achieves**
 
@@ -217,8 +298,9 @@ Our `INIT-001 — Network Security` initiative can be mapped to a custom standar
 <br>
 <div class="policy-to-security-posture-diagram">
   <img src="https://netsecer-mahesh.github.io/cloud-network-security-blogs/assets/images/Policy-to-Security-Posture.png"
-       alt="Azure F5 Palo Alto Application Hosting HLD">
+       alt="Policy to Security-Posture">
 </div>
+*Azure Policy establishes the governance baseline, while Microsoft Defender for Cloud extends visibility through centralized security posture and compliance monitoring.*
 <br>
 ### What does this give us?
 
