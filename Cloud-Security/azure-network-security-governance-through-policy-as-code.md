@@ -136,49 +136,15 @@ Before deployment, the scripts validate the active Azure context, target managem
 
 The deployment package contains:
 
-<h3 id="artifact-reference">Artifact Reference</h3>
+| Artifact | Purpose |
+|---|---|
+| Policy JSON | Custom policy definition |
+| Policy parameters JSON | Configurable policy parameters |
+| Initiative JSON | Groups individual policies |
+| Initiative parameters JSON | Parameters used during initiative assignment |
+| Python scripts | Deployment automation |
 
-<table>
-  <thead>
-    <tr>
-      <th>Artifact</th>
-      <th>Description</th>
-      <th>Repository Link</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>Custom Policy Definition</td>
-      <td>NSG Restricted Inbound Ports</td>
-      <td><a href="https://github.com/netsecer-mahesh/netsecer-mahesh.github.io/blob/main/cloud-security/artifacts/restricted_inbound_ports_policy.json" target="_blank">View JSON</a></td>
-    </tr>
-    <tr>
-      <td>Policy Parameters</td>
-      <td>Restricted inbound ports configuration</td>
-      <td><a href="https://github.com/netsecer-mahesh/netsecer-mahesh.github.io/blob/main/cloud-security/artifacts/restricted_inbound_ports_parameters.json" target="_blank">View JSON</a></td>
-    </tr>
-    <tr>
-      <td>Initiative Definition</td>
-      <td>Network Security Initiative</td>
-      <td><a href="https://github.com/netsecer-mahesh/netsecer-mahesh.github.io/blob/main/cloud-security/artifacts/network_security_initiative.json" target="_blank">View JSON</a></td>
-    </tr>
-    <tr>
-      <td>Initiative Assignment Parameters</td>
-      <td>Initiative assignment configuration</td>
-      <td><a href="https://github.com/netsecer-mahesh/netsecer-mahesh.github.io/blob/main/cloud-security/artifacts/network_security_initiative_parameters.json" target="_blank">View JSON</a></td>
-    </tr>
-    <tr>
-      <td>Policy Deployment Script</td>
-      <td>Deploys custom policy definitions</td>
-      <td><a href="https://github.com/netsecer-mahesh/netsecer-mahesh.github.io/blob/main/cloud-security/artifacts/deploy_policy.py" target="_blank">View Python Script</a></td>
-    </tr>
-    <tr>
-      <td>Initiative Deployment Script</td>
-      <td>Groups and deploys policy initiatives</td>
-      <td><a href="https://github.com/netsecer-mahesh/netsecer-mahesh.github.io/blob/main/cloud-security/artifacts/deploy_initiative.py" target="_blank">View Python Script</a></td>
-    </tr>
-  </tbody>
-</table>
+
 
 Explore the actual [deployment scripts and JSON artifacts](#artifact-reference).
 
@@ -314,18 +280,50 @@ Our `INIT-001 — Network Security` initiative can be mapped to a custom standar
 
 ## Artifact Reference
 
-<!-- Add links to your GitHub repository folders and files here -->
-
-| Artifact | Repository link |
-|---|---|
-| Custom policy definitions | Add repository link |
-| Policy parameter files | Add repository link |
-| Initiative definition | ### [INIT-001-network-Security_initiative]({{ '/cloud-security/artifacts/INIT-001-network-security_initiative.json' | relative_url }}) |
-| Initiative assignment parameters | Add repository link |
-| `deploy_policy.py` | Add repository link |
-| `deploy_initiative.py` | Add repository link |
-
 ---
+<h3 id="artifact-reference">Artifact Reference</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th>Artifact</th>
+      <th>Description</th>
+      <th>Repository Link</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Custom Policy Definition</td>
+      <td>NSG Restricted Inbound Ports</td>
+      <td><a href="https://github.com/netsecer-mahesh/netsecer-mahesh.github.io/blob/main/cloud-security/artifacts/restricted_inbound_ports_policy.json" target="_blank">View JSON</a></td>
+    </tr>
+    <tr>
+      <td>Policy Parameters</td>
+      <td>Restricted inbound ports configuration</td>
+      <td><a href="https://github.com/netsecer-mahesh/netsecer-mahesh.github.io/blob/main/cloud-security/artifacts/restricted_inbound_ports_parameters.json" target="_blank">View JSON</a></td>
+    </tr>
+    <tr>
+      <td>Initiative Definition</td>
+      <td>Network Security Initiative</td>
+      <td><a href="https://github.com/netsecer-mahesh/netsecer-mahesh.github.io/blob/main/cloud-security/artifacts/network_security_initiative.json" target="_blank">View JSON</a></td>
+    </tr>
+    <tr>
+      <td>Initiative Assignment Parameters</td>
+      <td>Initiative assignment configuration</td>
+      <td><a href="https://github.com/netsecer-mahesh/netsecer-mahesh.github.io/blob/main/cloud-security/artifacts/network_security_initiative_parameters.json" target="_blank">View JSON</a></td>
+    </tr>
+    <tr>
+      <td>Policy Deployment Script</td>
+      <td>Deploys custom policy definitions</td>
+      <td><a href="https://github.com/netsecer-mahesh/netsecer-mahesh.github.io/blob/main/cloud-security/artifacts/deploy_policy.py" target="_blank">View Python Script</a></td>
+    </tr>
+    <tr>
+      <td>Initiative Deployment Script</td>
+      <td>Groups and deploys policy initiatives</td>
+      <td><a href="https://github.com/netsecer-mahesh/netsecer-mahesh.github.io/blob/main/cloud-security/artifacts/deploy_initiative.py" target="_blank">View Python Script</a></td>
+    </tr>
+  </tbody>
+</table>
 
 ## Closing Thoughts
 
