@@ -266,7 +266,7 @@ Our `INIT-001 — Network Security` initiative can be mapped to a custom standar
 
 <br>
 <div class="policy-to-security-posture-diagram">
-  <img src="https://netsecer-mahesh.github.io/cloud-network-security-blogs/assets/images/Policy-to-Security-Posture.png"
+  <img src="https://netsecer-mahesh.github.io/cloud-network-security-blogs/assets/images/Azure-Policy-to-Stronger-Security.png"
        alt="Policy to Security-Posture">
 </div>
 *Azure Policy establishes the governance baseline, while Microsoft Defender for Cloud extends visibility through centralized security posture and compliance monitoring.*
